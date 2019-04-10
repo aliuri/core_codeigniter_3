@@ -1,0 +1,74 @@
+-install composer
+-create ssh 
+-kenjis/codeigniter-composer-installer (core)
+Install Third Party Libraries
+
+Codeigniter Matches CLI:
+
+$ php bin/install.php matches-cli master
+
+CodeIgniter HMVC Modules:
+
+$ php bin/install.php hmvc-modules master
+
+Modular Extensions - HMVC:
+
+$ php bin/install.php modular-extensions-hmvc codeigniter-3.x
+
+Ion Auth:
+
+$ php bin/install.php ion-auth 2
+
+CodeIgniter3 Filename Checker:
+
+$ php bin/install.php filename-checker master
+
+CodeIgniter Rest Server:
+
+$ php bin/install.php restserver 2.7.2
+
+CodeIgniter Developer Toolbar:
+
+$ php bin/install.php codeigniter-develbar master
+
+Run PHP built-in server (PHP 5.4 or later)
+
+$ cd /path/to/codeigniter
+$ bin/server.sh
+
+Update CodeIgniter
+
+$ cd /path/to/codeigniter
+$ composer update
+
+
+//make modules (controller,model,views)
+    php public/index.php matches create:app namaModul
+        contoh: 
+    php public/index.php matches create:app pengguna
+
+//make controller dengan folder
+    php public/index.php matches create:controller namaModul.namaModul extend:namaModul
+        contoh:
+    php public/index.php matches create:controller users.users extend:users
+
+//make controller dengan class extends di sesuaikan
+    php index.php matches create:controller nama e:nama_extedns
+        contoh:
+    php index.php matches create:controller users e:my
+
+//make models dengan folder
+    php public/index.php matches create:model namaModul.namaModul extend:namaModul
+        contoh:
+    php public/index.php matches create:model users.users extend:users
+
+//make models dengan class extends di sesuaikan
+    php index.php matches create:model nama e:nama_extedns
+        contoh:
+    php index.php matches create:model users e:my
+
+// Create an index_view.php
+    php public/index.php matches create:view user_view
+
+// Create an index_view.php inside users directory
+    php public/index.php matches create:view users.index_view
